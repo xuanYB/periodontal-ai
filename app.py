@@ -19,8 +19,8 @@ HIGH_THRESHOLD = 0.42
 ROOT = Path(__file__).resolve().parent
 
 MODEL_CANDIDATES = [
-    ROOT / "RandomForest_final_model_compressed_v2.pkl",
-    ROOT / "05_model" / "RandomForest_final_model_compressed_v2.pkl",
+    ROOT / "RandomForest_final_model_compressed.pkl",
+    ROOT / "05_model" / "RandomForest_final_model_compressed.pkl",
 ]
 
 
@@ -34,7 +34,7 @@ def load_model():
             return joblib.load(p), p
 
     raise FileNotFoundError(
-        "未找到 RandomForest_final_model_compressed_v2.pkl。"
+        "未找到 RandomForest_final_model_compressed.pkl。"
         "请把模型文件放在 app.py 同一目录。"
     )
 
